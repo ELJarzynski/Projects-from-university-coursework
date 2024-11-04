@@ -1,0 +1,111 @@
+/* Edit */
+.modal-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Dodajemy efekt rozmycia tła */
+  background-color: rgba(255, 255, 255, 0.3); /* Ustawiamy półprzezroczyste tło */
+  animation: fade-in 0.3s ease; /* Dodajemy animację pojawiania się modala */
+}
+
+.modal-content-edit {
+  margin: auto;
+  padding: 20px;
+  width: 50%; /* szerokość modalu */
+  max-height: 80%; /* maksymalna wysokość modalu */
+  overflow-y: auto; /* dodajemy pionowy scroll w przypadku długich treści */
+  background-color: #d4d4d6; /* Zaktualizowany kolor tła */
+  border-radius: 5px;
+  border: 5px solid #007bff; /* Zaktualizowany kolor ramki */
+  text-align: center;
+  color: #000;
+  opacity: 0.9;
+}
+
+.close-edit {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close-edit:hover,
+.close-edit:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Dodajemy efekt rozmycia tła */
+  background-color: rgba(255, 255, 255, 0.3); /* Ustawiamy półprzezroczyste tło */
+  animation: fade-in 0.3s ease; /* Dodajemy animację pojawiania się modala */
+}
+
+.modal-content-delete {
+  margin: auto;
+  padding: 20px;
+  width: 50%; /* szerokość modalu */
+  max-height: 80%; /* maksymalna wysokość modalu */
+  overflow-y: auto; /* dodajemy pionowy scroll w przypadku długich treści */
+  background-color: #d4d4d6; /* Zaktualizowany kolor tła */
+  border-radius: 5px;
+  border: 5px solid #ff3860; /* Zaktualizowany kolor ramki */
+  text-align: center;
+  color: #000;
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie przycisków */
+  margin-top: 20px; /* Dodanie marginesu między przyciskami */
+}
+
+.buttons button {
+  margin: 0 10px; /* Odstęp między przyciskami */
+}
+
+/* User */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+    
+}
+
+.modal-card-body {
+  color: white;
+}
+
+
+
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 0.9; }
+}
+
+ 
+  

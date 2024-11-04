@@ -1,0 +1,389 @@
+.section-name {
+    color: black; /* Zaktualizowany kolor tekstu na czarny */
+    font-weight: bold; /* Dodanie pogrubienia */
+    font-weight: bold;
+    font-size: 30px;
+    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
+  }
+  .section-table-container {
+    max-width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 30px;
+  }
+  
+  .section-link {
+    color: black; /* Ustaw kolor czcionki na czarny */
+    cursor: pointer; /* Zmień kursor na wskaźnik po najechaniu */
+  }
+  
+  
+  .board-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .section-edit-info {
+    font-size: 18px; /* Zmniejsz rozmiar czcionki */
+    font-weight: bold; /* Dodaj pogrubienie */
+    text-align: center; /* Wyśrodkuj tekst */
+    margin-bottom: 20px; /* Dodaj odstęp na dole */
+  }
+  
+  
+  .section-container {
+    display: flex;
+    align-items: wrap; /* Wyrównanie elementów do góry */
+    min-width: 700px;
+    overflow-x: scroll;
+    scroll-snap-type:x mandatory;
+  }
+  
+  .section-card {
+    min-width: 200px; /* Minimalna szerokość karty sekcji */
+    max-width: 300px; /* Maksymalna szerokość karty sekcji */
+    width: auto; /* Ustawienie szerokości na automatyczną */
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #cce5ff;
+    border: 5px solid #007bff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    word-wrap: break-word; 
+    scroll-snap-align: center;
+  }
+  
+  .add-task-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%; /* Ustawiamy guzik na środku */
+    transform: translateX(-50%); /* Przesuwamy guzik w lewo o połowę swojej szerokości */
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 1px 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .add-task-button:hover {
+    background-color: #0056b3; /* Kolor tła przycisku po najechaniu myszką */
+    border-color: #0056b3; /* Kolor ramki przycisku po najechaniu myszką */
+  }
+  
+  .add-section-btn-container {
+    text-align: center;
+  }
+  
+  .add-section-btn {
+    color: #fff; /* Kolor tekstu */
+    font-size: 18px;
+    padding: 21vh 75px; /* Szerokość i wysokość przycisku */
+    border: 4px solid #007bff; /* Grubość i kolor ramki przycisku */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Dodanie płynnego przejścia dla zmiany koloru tła i ramki */
+  }
+  
+  .add-section-btn:hover {
+    background-color: #71b36b; /* Kolor tła przycisku po najechaniu myszką */
+    border-color: #0056b3; /* Kolor ramki przycisku po najechaniu myszką */
+  }
+  
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #d4d4d6; /* Zaktualizowany kolor tła */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    border: 5px solid #007bff; /* Zaktualizowany kolor ramki */
+    text-align: center;
+    color:#000;
+    opacity: 0.9;
+  }
+  
+  .close {
+    color: #007bff; /* Zaktualizowany kolor ikony zamknięcia */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #0056b3; /* Zaktualizowany kolor ikony zamknięcia po najechaniu */
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .task-list-frame {
+    margin-top: 10px;
+  }
+  
+  .task-list-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .task {
+    margin-top: 10px;
+  }
+  
+  .task-name {
+    font-weight: bold;
+    color:#000;
+  }
+  
+  .task-description {
+    margin-top: 5px;
+  }
+  
+  .task-due-date {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  .task-name-frame {
+    border: 4px solid #007bff; /* Grubość i kolor ramki */
+    padding: 8px; /* Wielkość wewnętrznego odstępu ramki */
+    border-radius: 5px; /* Zaokrąglenie rogów ramki */
+    cursor: pointer; /* Kursor wskazujący na interaktywne elementy */
+    transition: border-color 0.3s; /* Płynne przejście zmiany koloru ramki */
+    background-color: #007bff; /* Kolor tła ramki */
+  }
+  
+  .task-name-frame:hover {
+    border-color: #0056b3; /* Kolor ramki po najechaniu myszką */
+  }
+  
+  .task-name {
+    color: #fff; /* Kolor tekstu */
+  }
+  
+  .edit-button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .edit-section-button {
+    background-color: #78e6e6; /* Kolor tła przycisku */
+    border: none; /* Usunięcie ramki */
+    color: #fff; /* Kolor tekstu */
+    padding: 6px 10px; /* Wielkość wewnętrznego odstępu przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s;
+    margin-right: 15px; /* Płynne przejście zmiany koloru tła */
+  }
+  
+  .delete-task-button {
+    background-color: #df7171; /* Kolor tła przycisku */
+    border: none; /* Usunięcie ramki */
+    color: #fff; /* Kolor tekstu */
+    padding: 6px 10px; /* Wielkość wewnętrznego odstępu przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s; /* Płynne przejście zmiany koloru tła */
+  }
+  
+  .delete-section-btn {
+    position: absolute;
+    right: 15px; /* Odległość od górnej krawędzi */
+    top: 17px; /* Odległość od lewej krawędzi */
+  }
+  
+  
+  .btn.btn-primary.section-name {
+    background-color: #78e6e6; /* Kolor tła przycisku */
+    border: none; /* Usunięcie ramki */
+    color: #fff; /* Kolor tekstu */
+    padding: 6px 10px; /* Wielkość wewnętrznego odstępu przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s; /* Płynne przejście zmiany koloru tła */
+    margin-right: 15px; /* Dodatkowy margines po prawej stronie */
+    margin-top: 30px;
+  }
+  
+  .edit-section-button:hover {
+    background-color: #61c7d4; /* Kolor tła przycisku po najechaniu myszką */
+  }
+  
+  .delete-task-button:hover {
+    background-color: #c05e4c; /* Kolor tła przycisku po najechaniu myszką */
+  }
+  
+  .btn.btn-primary.section-name:hover {
+    background-color: #61c7d4;
+  }
+
+  .ghost-card {
+    opacity: 0.5;
+    background: #F7FAFC;
+    border: 1px solid #4299e1;
+  }
+
+  .show-users-button {
+    background-color: #57af4c; /* Kolor tła przycisku */
+    border: none; /* Usunięcie ramki */
+    color: #fff; /* Kolor tekstu */
+    padding: 6px 10px; /* Wielkość wewnętrznego odstępu przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s; /* Płynne przejście zmiany koloru tła */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .show-users-button:hover {
+    background-color: #388e3c; /* Kolor tła przycisku po najechaniu myszką */
+  }
+
+  .add-user-button{
+    background-color: #57af4c; /* Kolor tła przycisku */
+    border: none; /* Usunięcie ramki */
+    color: #fff; /* Kolor tekstu */
+    padding: 6px 10px; /* Wielkość wewnętrznego odstępu przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s; /* Płynne przejście zmiany koloru tła */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .add-user-task-button{
+    background-color: #57af4c; /* Kolor tła przycisku */
+    border: none; /* Usunięcie ramki */
+    color: #fff; /* Kolor tekstu */
+    padding: 6px 10px; /* Wielkość wewnętrznego odstępu przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s; /* Płynne przejście zmiany koloru tła */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .add-user-task-button:hover{
+    background-color: #388e3c;
+  }
+
+  .add-user-button-hover{
+    background-color: #388e3c;
+  }
+
+  .notification-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .notification {
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  .notification-content {
+    text-align: center;
+  }
+  
+  .notification-message {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .notification-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .notification-buttons .button {
+    margin: 0 10px;
+  }
+
+  .info-container{
+    position: relative;
+  }
+  
+  .info-button {
+    position: fixed;
+    top: 550px;
+    left: 20px;
+    z-index: 1001;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .info-button:hover {
+    background-color: #0452a5;
+  }
+  
+  .info-panel {
+    position: fixed;
+    top: 220px;
+    left: -300px;
+    width: 300px;
+    height: 42%;
+    background-color: #757474;
+    box-shadow: 12px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.3s;
+    z-index: 1000;
+  }
+  
+  .info-panel--visible {
+    left: 0;
+  }
+  
+  .close-info-button {
+    background-color: #df7171;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .close-info-button:hover {
+    background-color: #c05e4c;
+  }
+  
+  #section-title:hover {
+    color: #b5b6b4; /* Zmiana koloru tekstu na biały po najechaniu myszką */
+    background-color: #777879;
+    border-radius: 5px;
+  }
+  
+  #delete-section{
+    background-color: #f0a2a2;
+    border: 3px solid #7c0e0e;
+  }
+
